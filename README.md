@@ -11,6 +11,5 @@ go run main.go baseImage overImage [options]
 * -o outfile : name output file as outfile (default `output.png`, extension is `png`)
 
 ## rest tasks
-* separate package
 * over position
 
