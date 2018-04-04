@@ -42,7 +42,7 @@ func ResizeImage(imgInfo *ImageInfo, x uint, y uint) {
 }
 
 func SynthesizeImages(baseInfo ImageInfo, overInfo ImageInfo) *image.RGBA {
-	startPoint := image.Point{0, 0}
+	startPoint := image.Point{0, int(baseInfo.Size.Y / 10)}
 	overRectangle := image.Rectangle{startPoint, startPoint.Add(overInfo.Size)}
 	baseRectangle := image.Rectangle{image.Point{0, 0}, baseInfo.Size}
 

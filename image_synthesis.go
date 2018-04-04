@@ -28,7 +28,7 @@ func main() {
 		overImgInfo := synthesis.GetImageInfo(overPath)
 
 		if baseImgInfo.Size.X != overImgInfo.Size.X {
-			synthesis.ResizeImage(&overImgInfo, uint(baseImgInfo.Size.X), uint(baseImgInfo.Size.Y))
+			synthesis.ResizeImage(&overImgInfo, uint(baseImgInfo.Size.X), uint(baseImgInfo.Size.Y)*8/10)
 		}
 
 		rgba := synthesis.SynthesizeImages(baseImgInfo, overImgInfo)
